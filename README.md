@@ -36,10 +36,19 @@ Kann der in 2. berechnete Speedup tatsächlich erreicht werden? Begründen Sie I
 
 Verwenden Sie in dieser Übung das virtuelle Image (Linux), das Sie in der letzten Woche aufgesetzt haben.
 
+Wenn Sie Linux auf ihrem Notebook verwenden, können Sie diese Übung auch auf ihrem Notebook durchführen. Sonst bitte die VM verwenden.
+
+Warum? 
+1. Wir werden mit Docker arbeiten und wollen nicht die ganze Zeit Images durch die Gegend schieben (Hochschulnetz).
+2. Sie müllen sich ihren Windows-Rechner nicht mit Docker zu!
+
+> Denken Sie daran, dass Sie weiterhin in ihrer Ressourcegruppe arbeiten!
+
 1. Gehen Sie zum [Azure Portal](http://portal.azure.com)
-2. Starten Sie ihre VM 
-3. Verbinden Sie sich entweder via ssh mit ihrer
-4. Installieren Sie auf der VM Docker, in dem Sie folgende 
+2. Löschen Sie zunächst die VM, die Sie letzte Woche angelegt haben, auf der Windows als Gastsystem läuft! **Löschen Sie nicht das Linux VM Image!**
+3. Starten Sie ihre Linux-VM 
+4. Verbinden Sie sich entweder via ssh mit ihrer
+5. Installieren Sie auf der VM Docker, in dem Sie folgende Schritte ausführen. 
 
 Befehle auf der VM ausführen (kopieren und einfügen!):
 
