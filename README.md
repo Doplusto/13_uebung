@@ -16,8 +16,16 @@ Diese Übung behandelt speziell das Thema _Amdahl's Law_, _Virtualisierung_ und 
 
 Um welchen Faktor S (overall speedup) wird ein Programm schneller, wenn Sie 10% des Programms (paralleler Anteil) 90 mal (Prozessor N=90) schneller machen?
 
+**Lösung**
+
+$$ \frac{1} {(1-0.1)+0.1/90} = 1/0.9011 = 1.11$$
+
 ### b)
 Um welchen Faktor S (overall speedup) wird ein Programm schneller, wenn 90% des Programms (paralleler Anteil) 10 mal (Prozessor N=10) schneller wird?
+
+**Lösung**
+
+$$ \frac{1} {(1-0.9)+0.9/10} = 1/0.19 = 5.26$$
 
 ### c)
 Ein bestimmtes Programm hat den in der Abbildung gezeigten Ablauf. Dabei stellt jedes Quadrat eine unteilbare Aufgabe
@@ -31,6 +39,28 @@ Bestimmen Sie mit Hilfe von Amdahl’s Law:
 2. den maximalen Speedup für die Prozessoranzahlen p = ∞, p = 5, p = 4, p = 3 und p = 2.
 
 Kann der in 2. berechnete Speedup tatsächlich erreicht werden? Begründen Sie Ihre Aussage
+
+**Lösung**
+
+1. 
+p = 15/20 = 75%
+
+2. 
+- p = ∞: Smax= 1/f = 20/5 = 4
+- p = 5: Smax = 1/(0,25+0,75/5) = 2,5
+- p = 4: Smax = 1/(0,25+0,75/4) ≈ 2,29
+- p = 3: Smax = 1/(0,25+0,75/3) = 2
+- p = 2: Smax = 1/(0,25+0,75/2) = 1,6
+
+Dieser Speedup kann nicht erreicht werden, da die
+parallelisierbaren Teile zum einen nicht teilbar und zum anderen nicht zusammenhängend sind
+- Damit können die Teile nicht optimal auf die p Prozessoren
+verteilt werden
+- Amdahl’s Gesetz stellt lediglich eine obere Schranke dar!
+- Im Spezialfall p = ∞ wird angenommen, dass der
+parallelisierbare Anteil →0 reduziert wird
+- unendlich viele Prozessoren erledigen die in unendlich
+kleine Teile zerlegten Tasks in unendlich kleiner Zeit
 
 ## Aufgabe 2: Docker Installation
 
